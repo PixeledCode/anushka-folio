@@ -64,7 +64,7 @@ const NavLink = ({
     <a
       href={href}
       className={cn(
-        "text-xl font-semibold flex items-center gap-3",
+        "text-xl font-semibold flex items-center gap-3 text-black",
         active && "text-primary"
       )}
     >

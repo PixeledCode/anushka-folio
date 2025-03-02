@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: var(--font-hanken-grotesk);
-  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-dm-serif-text);
   --color-primary: #ca244d;
   --color-lime-11: #5c7c2f;
   --color-lime-12: #37401c;
@@ -48,6 +48,8 @@
   --slate-9: #8b8d98;
   --transparent-black: #00000033;
   --transparent-white: #fcfcfd33;
+  --font-serif: var(--font-dm-serif-text);
+  --font-sans: var(--font-hanken-grotesk);
 }
 
 body {
