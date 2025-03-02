@@ -1,0 +1,14 @@
+export { ArrowUpRight } from "./ArrowUpRight";
+export { Chat } from "./Chat";
+export { ChevronRight } from "./ChevronRight";
+export { ConnectFilled } from "./ConnectFilled";
+export { ConnectOutline } from "./ConnectOutline";
+export { HomeFilled } from "./HomeFilled";
+export { HomeOutline } from "./HomeOutline";
+export { Info } from "./Info";
+export { Linkedin } from "./Linkedin";
+export { Location } from "./Location";
+export { Mail } from "./Mail";
+export { Resume } from "./Resume";
+export { WorkFilled } from "./WorkFilled";
+export { WorkOutline } from "./WorkOutline";

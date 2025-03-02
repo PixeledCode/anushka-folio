@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-hanken-grotesk);
+  --font-mono: var(--font-geist-mono);
+  --color-primary: #ca244d;
+  --color-lime-11: #5c7c2f;
+  --color-lime-12: #37401c;
+  --color-lime-3: #eef6d6;
+  --color-lime-7: #abc978;
+  --color-basic-white: #ffffff;
+  --color-slate-1: #fcfcfd;
+  --color-slate-10: #80838d;
+  --color-slate-11: #60646c;
+  --color-slate-12: #1c2024;
+  --color-slate-2: #f9f9fb;
+  --color-slate-3: #f0f0f3;
+  --color-slate-4: #e8e8ec;
+  --color-slate-5: #e0e1e6;
+  --color-slate-6: #d9d9e0;
+  --color-slate-7: #cdced6;
+  --color-slate-8: #b9bbc6;
+  --color-slate-9: #8b8d98;
+  --color-transparent-black: #00000033;
+  --color-transparent-white: #fcfcfd33;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #ca244d;
+  --lime-11: #5c7c2f;
+  --lime-12: #37401c;
+  --lime-3: #eef6d6;
+  --lime-7: #abc978;
+  --basic-white: #ffffff;
+  --slate-1: #fcfcfd;
+  --slate-10: #80838d;
+  --slate-11: #60646c;
+  --slate-12: #1c2024;
+  --slate-2: #f9f9fb;
+  --slate-3: #f0f0f3;
+  --slate-4: #e8e8ec;
+  --slate-5: #e0e1e6;
+  --slate-6: #d9d9e0;
+  --slate-7: #cdced6;
+  --slate-8: #b9bbc6;
+  --slate-9: #8b8d98;
+  --transparent-black: #00000033;
+  --transparent-white: #fcfcfd33;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+}
