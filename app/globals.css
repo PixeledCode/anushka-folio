@@ -68,3 +68,12 @@ body {
     transform: rotate(-1.5deg);
   }
 }
+
+.footer {
+  span:first-of-type {
+    transform: rotate(1deg);
+  }
+  span:last-of-type {
+    transform: rotate(-1deg);
+  }
+}
