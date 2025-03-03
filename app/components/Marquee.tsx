@@ -3,7 +3,7 @@ import ReactMarquee from "react-fast-marquee";
 
 export default function Marquee() {
   return (
-    <div className="bg-white pt-28 pb-16">
+    <section className="bg-white pt-28 pb-16">
       <ReactMarquee>
         <div className="flex gap-10">
           <Image
@@ -64,6 +64,6 @@ export default function Marquee() {
           />
         </div>
       </ReactMarquee>
-    </div>
+    </section>
   );
 }

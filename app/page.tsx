@@ -1,11 +1,12 @@
-import CollaborateTitles from "@/components/CollaborateTitles";
-import Marquee from "@/components/Marquee";
 import Image from "next/image";
+import CollaborateTitles from "./components/CollaborateTitles";
+import Marquee from "./components/Marquee";
+import Work from "./components/Work";
 
 export default function Home() {
   return (
     <main>
-      <div className="p-20">
+      <section className="p-20">
         <h1 className="text-2xl">
           Hi, I’m Anushka —{" "}
           <span className="font-semibold">
@@ -50,8 +51,9 @@ export default function Home() {
             className="absolute top-0 right-0"
           />
         </div>
-      </div>
+      </section>
       <Marquee />
+      <Work />
     </main>
   );
 }
