@@ -2,6 +2,7 @@ import Image from "next/image";
 import CollaborateTitles from "./components/CollaborateTitles";
 import Marquee from "./components/Marquee";
 import Work from "./components/Work";
+import Musings from "./components/Musings";
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
       </section>
       <Marquee />
       <Work />
+      <Musings />
     </main>
   );
 }

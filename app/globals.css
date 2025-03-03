@@ -28,7 +28,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1C2024;
+  --foreground: #1c2024;
   --primary: #ca244d;
   --lime-11: #5c7c2f;
   --lime-12: #37401c;
@@ -58,4 +58,13 @@ body {
   color: var(--foreground);
   background: var(--slate-2);
   font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+}
+
+.musings {
+  article:first-of-type {
+    transform: rotate(1.5deg);
+  }
+  article:last-of-type {
+    transform: rotate(-1.5deg);
+  }
 }
