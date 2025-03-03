@@ -3,6 +3,7 @@ import CollaborateTitles from "./components/CollaborateTitles";
 import Marquee from "./components/Marquee";
 import Work from "./components/Work";
 import Musings from "./components/Musings";
+import About from "./components/About";
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
       <Marquee />
       <Work />
       <Musings />
+      <About />
     </main>
   );
 }
