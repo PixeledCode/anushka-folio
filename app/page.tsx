@@ -1,4 +1,5 @@
 import CollaborateTitles from "@/components/CollaborateTitles";
+import Marquee from "@/components/Marquee";
 import Image from "next/image";
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Marquee />
     </main>
   );
 }

@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white">
+    <nav>
       <div className="flex items-center gap-4 justify-between px-20 py-6">
         <NavLink
           href="/"

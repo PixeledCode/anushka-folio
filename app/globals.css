@@ -54,6 +54,6 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--slate-2);
   font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
 }
