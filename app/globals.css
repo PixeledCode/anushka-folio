@@ -77,3 +77,10 @@ body {
     transform: rotate(-1deg);
   }
 }
+
+.underlineSVG {
+  border-image: url("/underline.svg") 98;
+  border-width: 0 0 18px;
+  border-style: solid;
+  border-color: transparent;
+}

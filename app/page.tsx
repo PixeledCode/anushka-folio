@@ -22,7 +22,13 @@ export default function Home() {
               <CollaborateTitles />
             </div>
           </div>
-          <p className="">to bridge the gap between data and people.</p>
+          <div className="relative ">
+            <p>
+              to bridge the gap between{" "}
+              <span className="underlineSVG">data and people</span>.
+            </p>
+            {/* <div className="absolute -bottom-4 right-96 w-[460px] h-3 bg-[url('/underline.svg')] bg-cover bg-center"></div> */}
+          </div>
         </div>
         <div className="mt-16">
           <Image
