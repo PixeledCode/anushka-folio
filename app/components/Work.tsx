@@ -4,13 +4,21 @@ import Image from "next/image";
 
 export default function Work() {
   return (
-    <section className="p-20 flex gap-16">
-      <Image src="/books.png" alt="books" width={400} height={360} />
+    <section className="p-10 md:p-20 flex gap-16">
+      <Image
+        src="/books.png"
+        alt="books"
+        width={400}
+        height={360}
+        className="hidden md:block"
+      />
       <div className="w-full">
-        <h2 className="text-light uppercase">basics</h2>
+        <h2 className="text-light uppercase text-sm md:text-base">basics</h2>
         <div className="mt-2">
-          <span className="text-3xl font-serif">Work Experience</span>
-          <div className="mt-12 flex flex-col gap-6">
+          <span className="text-2xl md:text-3xl font-serif">
+            Work Experience
+          </span>
+          <div className="mt-6 md:mt-12 flex flex-col gap-4 md:gap-6">
             <WorkItem
               title="Parallel HQ (2023-Present)"
               subtitle="Product Designer"
@@ -60,12 +68,14 @@ const WorkItem = ({
           <ChevronRight />
         </div>
       ) : null}
-      <span className={cn("text-2xl pl-8", current && "font-semibold")}>
+      <span
+        className={cn("text-xl md:text-2xl pl-8", current && "font-semibold")}
+      >
         {title}
       </span>
       <div className="flex items-center gap-10">
-        <span className="text-light">{subtitle}</span>
-        <div className="w-6 h-6">
+        <span className="text-light hidden lg:block">{subtitle}</span>
+        <div className="w-6 h-6 shrink-0">
           <ArrowUpRight />
         </div>
       </div>

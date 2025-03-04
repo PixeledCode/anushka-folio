@@ -14,10 +14,16 @@ export default function Connect() {
           Let’s create <span className="text-primary">something</span> together!
         </h1>
         <div className="mt-10 flex flex-col gap-4">
-          <ConnectLink href="#" icon={<Mail fill="var(--slate-12)" />}>
+          <ConnectLink
+            href="mailto:hello@anushkagokhale.com"
+            icon={<Mail fill="var(--slate-12)" />}
+          >
             hello@anushkagokhale.com
           </ConnectLink>
-          <ConnectLink href="#" icon={<Linkedin fill="var(--slate-12)" />}>
+          <ConnectLink
+            href="https://linkedin.com/in/anushkaag"
+            icon={<Linkedin fill="var(--slate-12)" />}
+          >
             linkedin.com/in/anushkaag
           </ConnectLink>
           <ConnectLink href="#" icon={<Resume />} primary>
@@ -49,7 +55,7 @@ const ConnectLink = ({
   primary?: boolean;
 }) => {
   return (
-    <a href={href} className="py-2 flex items-center gap-3">
+    <a href={href} className="py-2 flex items-center gap-3" target="_blank">
       <div className="w-6 h-6">{icon}</div>
       <span
         className={cn(

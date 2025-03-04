@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Musings() {
   return (
-    <section className="py-10">
+    <section className="py-10 hidden md:block">
       <div className="bg-[url('/waves.svg')] w-full h-[87px]"></div>
       <div className="p-20 bg-slate-3">
         <h2 className="text-light uppercase">beyond basics</h2>
@@ -23,7 +23,7 @@ export default function Musings() {
               title="Visiting Faculty @ Srishti Manipal"
               subtitle="I facilitated the course ‘Information Visualisation’ over 6 weeks for 25 third-year undergraduate students.  "
               image="/smi.png"
-              locationTag="Bangaluru"
+              locationTag="Bengaluru"
             />
             <Card
               title="Yatri @ Jagriti Yatra"

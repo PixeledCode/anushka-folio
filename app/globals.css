@@ -72,10 +72,10 @@ body {
 }
 
 .footer {
-  span:first-of-type {
+  span {
     transform: rotate(1deg);
   }
-  span:last-of-type {
+  a {
     transform: rotate(-1deg);
   }
 }

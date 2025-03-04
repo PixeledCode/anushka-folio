@@ -1,27 +1,16 @@
 export default function Footer() {
-  const Item = ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => {
-    return (
+  return (
+    <footer className="py-10 md:py-16 px-3 flex justify-center gap-3 flex-wrap footer text-sm md:text-base">
+      <span className="text-basic-white bg-lime-11 px-1 font-semibold uppercase">
+        designed with ❤️ by anushkaag
+      </span>
       <a
-        href={href}
+        href="https://pixeledcode.com/"
         className="text-basic-white bg-lime-11 px-1 font-semibold uppercase"
         target="_blank"
       >
-        {children}
-      </a>
-    );
-  };
-  return (
-    <footer className="py-16 px-3 flex justify-center gap-3 flex-wrap footer">
-      <Item href="#">designed with ❤️ by anushkaag</Item>
-      <Item href="https://pixeledcode.com/">
         developed with ✨ by @pixeledcode
-      </Item>
+      </a>
     </footer>
   );
 }

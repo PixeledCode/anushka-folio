@@ -17,15 +17,25 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="flex items-center gap-4 justify-between px-20 py-6">
+      <div className="flex items-center gap-4 justify-between px-10 md:px-20 py-4 md:py-6">
         <NavLink
           href="/"
           icon={pathname === "/" ? <HomeFilled /> : <HomeOutline />}
           active={pathname === "/"}
+          className="hidden md:flex"
         >
           about me
         </NavLink>
-        <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
+        <a href="/" className="block md:hidden">
+          <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
+        </a>
+        <Image
+          src="/anushkaLogo.svg"
+          alt="logo"
+          width={121}
+          height={100}
+          className="hidden md:block"
+        />
         <div className="flex gap-8">
           <NavLink
             href="/work"
@@ -54,21 +64,24 @@ const NavLink = ({
   href,
   icon,
   active,
+  className,
 }: {
   children: React.ReactNode;
   href: string;
   icon?: React.ReactNode;
   active?: boolean;
+  className?: string;
 }) => {
   return (
     <a
       href={href}
       className={cn(
-        "text-xl font-semibold flex items-center gap-3 text-black",
-        active && "text-primary"
+        "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black",
+        active && "text-primary",
+        className && className
       )}
     >
-      <div className="w-5 h-5">{icon}</div>
+      <div className="w-4 h-4 md:w-5 md:h-5">{icon}</div>
       {children}
     </a>
   );
