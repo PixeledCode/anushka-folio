@@ -10,6 +10,7 @@ import {
 } from "@/assets/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -26,9 +27,9 @@ export default function Navbar() {
         >
           about me
         </NavLink>
-        <a href="/" className="block md:hidden">
+        <Link href="/" className="block md:hidden">
           <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
-        </a>
+        </Link>
         <Image
           src="/anushkaLogo.svg"
           alt="logo"
@@ -73,7 +74,7 @@ const NavLink = ({
   className?: string;
 }) => {
   return (
-    <a
+    <Link
       href={href}
       className={cn(
         "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black",
@@ -83,6 +84,6 @@ const NavLink = ({
     >
       <div className="w-4 h-4 md:w-5 md:h-5">{icon}</div>
       {children}
-    </a>
+    </Link>
   );
 };
