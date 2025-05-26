@@ -26,6 +26,7 @@
   --color-transparent-black: #00000033;
   --color-transparent-white: #fcfcfd33;
   --color-light: var(--slate-11);
+  --color-foreground: #1c2024;
 }
 
 :root {
@@ -63,11 +64,23 @@ body {
 }
 
 .musings {
+  article {
+    transition: transform 0.2s ease-in-out;
+  }
+
   article:first-of-type {
     transform: rotate(1.5deg);
+
+    &:hover {
+      transform: rotate(0deg);
+    }
   }
   article:last-of-type {
     transform: rotate(-1.5deg);
+
+    &:hover {
+      transform: rotate(0deg);
+    }
   }
 }
 

@@ -5,13 +5,6 @@ import Image from "next/image";
 export default function Work() {
   return (
     <section className="p-10 md:p-20 flex gap-16">
-      <Image
-        src="/books.png"
-        alt="books"
-        width={400}
-        height={360}
-        className="hidden md:block"
-      />
       <div className="w-full">
         <h2 className="text-light uppercase text-sm md:text-base">basics</h2>
         <div className="mt-2">
@@ -43,6 +36,13 @@ export default function Work() {
           </div>
         </div>
       </div>
+      <Image
+        src="/books.png"
+        alt="books"
+        width={400}
+        height={360}
+        className="hidden md:block"
+      />
     </section>
   );
 }

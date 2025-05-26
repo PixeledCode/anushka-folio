@@ -17,10 +17,15 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav className="sticky top-0 z-10 bg-slate-2">
       <div className="flex items-center gap-4 justify-between px-10 md:px-20 py-4 md:py-6">
         <NavLink
-          href="/"
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
           icon={pathname === "/" ? <HomeFilled /> : <HomeOutline />}
           active={pathname === "/"}
           className="hidden md:flex"
@@ -39,14 +44,12 @@ export default function Navbar() {
         />
         <div className="flex gap-8">
           <NavLink
-            href="/work"
-            icon={pathname === "/work" ? <WorkFilled /> : <WorkOutline />}
-            active={pathname === "/work"}
-          >
-            work
-          </NavLink>
-          <NavLink
-            href="/connect"
+            onClick={() => {
+              window.scrollTo({
+                top: document.getElementById("page-connect")?.offsetTop,
+                behavior: "smooth",
+              });
+            }}
             icon={
               pathname === "/connect" ? <ConnectFilled /> : <ConnectOutline />
             }
@@ -62,28 +65,28 @@ export default function Navbar() {
 
 const NavLink = ({
   children,
-  href,
+  onClick,
   icon,
   active,
   className,
 }: {
   children: React.ReactNode;
-  href: string;
+  onClick: () => void;
   icon?: React.ReactNode;
   active?: boolean;
   className?: string;
 }) => {
   return (
-    <Link
-      href={href}
+    <button
+      onClick={onClick}
       className={cn(
-        "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black",
+        "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black cursor-pointer",
         active && "text-primary",
         className && className
       )}
     >
       <div className="w-4 h-4 md:w-5 md:h-5">{icon}</div>
       {children}
-    </Link>
+    </button>
   );
 };

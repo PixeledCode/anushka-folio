@@ -1,5 +1,7 @@
+"use client";
 import { Chat, Linkedin, Mail, Resume } from "@/assets/icons";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function About() {
   return (
@@ -10,7 +12,7 @@ export default function About() {
           alt="anushka giving talk"
           width={440}
           height={256}
-          className="h-fit"
+          className="h-fit hover:scale-97 transition-all duration-300"
         />
         <p className="text-base md:text-2xl">
           I graduated from 🎓{" "}
@@ -24,7 +26,10 @@ export default function About() {
           timelines, and handled shipping and delivery seamlessly.
         </p>
       </div>
-      <div className="px-10 md:px-20 py-7 md:py-14 bg-basic-white flex flex-wrap gap-4 justify-between">
+      <div
+        className="px-10 md:px-20 py-7 md:py-14 bg-basic-white flex flex-wrap gap-4 justify-between border-y border-slate-4"
+        id="page-connect"
+      >
         <div className="flex gap-3 md:gap-5 items-center">
           <div className="w-6 md:w-8">
             <Chat />
@@ -34,15 +39,18 @@ export default function About() {
           </h2>
         </div>
         <div className="flex gap-8 md:gap-10 text-xl md:text-2xl font-semibold text-primary">
-          <a
-            href="mailto:hello@anushkagokhale.com"
-            className="flex items-center gap-1 md:gap-3"
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText("hello@anushkagokhale.com");
+              toast("Email copied to clipboard");
+            }}
+            className="flex items-center gap-1 md:gap-3 cursor-pointer"
           >
             <div className="w-5 md:w-6">
               <Mail />
             </div>
             Email
-          </a>
+          </button>
           <a
             href="https://linkedin.com/in/anushkaag"
             className="flex items-center gap-1 md:gap-3"

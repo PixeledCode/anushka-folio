@@ -3,9 +3,14 @@ import ReactMarquee from "react-fast-marquee";
 
 export default function Marquee() {
   return (
-    <section className="bg-white pt-14 md:pt-28 pb-6 md:pb-16">
+    <section className="bg-white py-10 md:py-16 border-y border-slate-4">
+      <div className="flex justify-center">
+        <span className="text-md uppercase text-slate-11">
+          Past Collaborations
+        </span>
+      </div>
       <ReactMarquee>
-        <div className="flex gap-10">
+        <div className="flex gap-10 mt-8">
           <Image
             src="/companies/1.png"
             alt="company 1"
