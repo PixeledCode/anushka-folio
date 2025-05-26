@@ -2,10 +2,8 @@
 
 import {
   HomeOutline,
-  WorkOutline,
   ConnectOutline,
   HomeFilled,
-  WorkFilled,
   ConnectFilled,
 } from "@/assets/icons";
 import { cn } from "@/lib/utils";
