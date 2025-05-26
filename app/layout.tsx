@@ -19,8 +19,8 @@ const dmSerifText = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
-  title: "Anushka Gokhale | Portfolio",
-  description: "Anushka Gokhale | Portfolio",
+  title: "Anushka Gokhale",
+  description: "Anushka Gokhale",
 };
 
 export default function RootLayout({
