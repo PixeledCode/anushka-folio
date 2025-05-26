@@ -1,5 +1,5 @@
 "use client";
-import { Chat, Linkedin, Mail, Resume } from "@/assets/icons";
+import { Chat, Linkedin, Mail } from "@/assets/icons";
 import Image from "next/image";
 import { toast } from "sonner";
 

@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  HomeOutline,
-  ConnectOutline,
-  HomeFilled,
-  ConnectFilled,
-} from "@/assets/icons";
+import { ConnectOutline, ConnectFilled } from "@/assets/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
