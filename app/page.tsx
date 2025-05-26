@@ -56,27 +56,36 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <p className="mt-10 max-w-[901px] text-xl md:text-2xl">
+          <p className="mt-10 max-w-[901px] text-xl md:text-2xl text-slate-11">
             I have worked on design, research, and strategy for tech products
             from domains like{" "}
-            <strong>
+            <span className="font-semibold text-foreground">
               {" "}
               Lending, Data Exchange, Health, Agricultural Trading, Fraud
               Prevention,
-            </strong>{" "}
+            </span>{" "}
             and more.
           </p>
         </div>
         <div className="py-3 md:pb-0 md:pt-20 flex gap-10 px-10 md:px-20">
           <div className="relative h-fit">
             <div className="absolute top-0 left-0 w-1 h-full bg-lime-7" />
-            <p className="text-xl md:text-3xl max-w-[835px] pl-5">
+            <p className="text-xl md:text-3xl max-w-[835px] pl-5 text-slate-11">
               I have{" "}
-              <span className="font-semibold">4+ years of experience</span>, a
-              background in public policy, and expertise in designing for social
-              impact. I strive to create inclusive, accessible interfaces for{" "}
-              <span className="font-semibold">data products</span> and{" "}
-              <span className="font-semibold">enterprise solutions</span>.
+              <span className="font-semibold text-foreground">
+                4+ years of experience
+              </span>
+              , a background in public policy, and expertise in designing for
+              social impact. I strive to create inclusive, accessible interfaces
+              for{" "}
+              <span className="font-semibold text-foreground">
+                data products
+              </span>{" "}
+              and{" "}
+              <span className="font-semibold text-foreground">
+                enterprise solutions
+              </span>
+              .
             </p>
           </div>
           <Image

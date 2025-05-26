@@ -77,7 +77,7 @@ const Card = ({
           {statsTag && <Tag>{statsTag}</Tag>}
         </div>
       </div>
-      <div className="flex flex-col gap-4 mt-4 mb-2">
+      <div className="flex flex-col gap-2 mt-4 mb-2">
         <h3 className="text-xl font-semibold">{title}</h3>
         <span className="text-xl">{subtitle}</span>
       </div>

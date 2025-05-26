@@ -61,12 +61,12 @@ export default function About() {
             </div>
             LinkedIn
           </a>
-          <a href="#" className="flex items-center gap-1 md:gap-3">
+          {/* <a href="#" className="flex items-center gap-1 md:gap-3">
             <div className="w-5 md:w-6">
               <Resume />
             </div>
             Resume
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

@@ -75,6 +75,13 @@ body {
       transform: rotate(0deg);
     }
   }
+
+  article:nth-of-type(2) {
+    &:hover {
+      transform: rotate(1.5deg);
+    }
+  }
+
   article:last-of-type {
     transform: rotate(-1.5deg);
 
@@ -106,4 +113,25 @@ body {
 
 .shadow-popover {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 25%);
+}
+
+.work-icon {
+  transition: transform 0.2s ease;
+}
+
+.work-item {
+  &:hover {
+    .work-icon {
+      transform: translate(2px, -2px);
+    }
+  }
+}
+
+.navbar {
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  position: fixed;
+  width: 100%;
+  mask: linear-gradient(white, white, transparent);
+  backdrop-filter: blur(10px);
+  z-index: 20;
 }

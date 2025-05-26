@@ -15,31 +15,40 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-10 bg-slate-2">
+    <nav className="navbar">
       <div className="flex items-center gap-4 justify-between px-10 md:px-20 py-4 md:py-6">
-        <NavLink
+        {/* <NavLink
           onClick={() => {
             window.scrollTo({
               top: 0,
               behavior: "smooth",
             });
           }}
-          icon={pathname === "/" ? <HomeFilled /> : <HomeOutline />}
-          active={pathname === "/"}
+          icon={<HomeOutline />}
+          // active={pathname === "/"}
           className="hidden md:flex"
         >
           about me
-        </NavLink>
+        </NavLink> */}
         <Link href="/" className="block md:hidden">
           <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
         </Link>
-        <Image
-          src="/anushkaLogo.svg"
-          alt="logo"
-          width={121}
-          height={100}
-          className="hidden md:block"
-        />
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <Image
+            src="/anushkaLogo.svg"
+            alt="logo"
+            width={121}
+            height={100}
+            className="hidden md:block cursor-pointer"
+          />
+        </button>
         <div className="flex gap-8">
           <NavLink
             onClick={() => {
