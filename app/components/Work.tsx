@@ -13,10 +13,15 @@ export default function Work() {
           </span>
           <div className="mt-6 md:mt-12 flex flex-col gap-4 md:gap-6">
             <WorkItem
-              title="Parallel HQ (2023-Present)"
+              title="EPIC World (2025-Present)"
+              subtitle="Lead Designer"
+              link="https://www.epicworld.com/"
+              current={true}
+            />
+            <WorkItem
+              title="Parallel HQ (2023-2025)"
               subtitle="Sr. Product Designer"
               link="https://www.parallelhq.com"
-              current={true}
             />
             <WorkItem
               title="Srishti Manipal (2024)"
