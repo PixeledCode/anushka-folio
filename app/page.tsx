@@ -7,6 +7,8 @@ import About from "./components/About";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/Popover";
 import { Info } from "@/assets/icons";
 import CursorTooltip from "./components/CursorTooltip";
+import RichText from "@/components/RichText";
+import { homePage } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -15,10 +17,8 @@ export default function Home() {
         <div className="py-20 md:pt-40 px-10 md:px-20 bg-[url('/header-texture.png')] bg-cover border-b border-slate-4">
           <div className="flex items-center gap-1">
             <h1 className="text-xl md:text-2xl">
-              Hi, I’m Anushka —{" "}
-              <span className="font-semibold">
-                Product Designer & Number-Crunching Storyteller
-              </span>
+              {homePage.heroGreeting}{" "}
+              <span className="font-semibold">{homePage.heroTagline}</span>
             </h1>
             <div className="hidden md:block mt-2">
               <Popover>
@@ -34,11 +34,7 @@ export default function Home() {
                     height={320}
                     alt="quote from book: a mathematician reads the newspapaer"
                   />
-                  <p className="text-lg mt-5">
-                    Author John Allen Paulos’s fondly dedicates his book ‘A
-                    Mathematician Reads the Newspaper’ to storytelling
-                    number-crunchers and number-crunching storytellers.
-                  </p>
+                  <p className="text-lg mt-5">{homePage.popoverQuote}</p>
                 </PopoverContent>
               </Popover>
             </div>
@@ -50,10 +46,10 @@ export default function Home() {
                 <CollaborateTitles />
               </div>
             </div>
-            <div className="relative ">
+            <div className="relative">
               <p>
                 to bridge the gap between{" "}
-                <CursorTooltip text="sometimes animals and birds">
+                <CursorTooltip text={homePage.cursorTooltipText}>
                   <span className="underlineSVG">data and people</span>
                 </CursorTooltip>
                 .
@@ -61,35 +57,20 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-10 max-w-[901px] text-xl md:text-2xl text-slate-11">
-            I have worked on design, research, and strategy for tech products
-            from domains like{" "}
-            <span className="font-semibold text-foreground">
-              {" "}
-              Lending, Data Exchange, Health, Agricultural Trading, Fraud
-              Prevention,
-            </span>{" "}
-            and more.
+            <RichText
+              text={homePage.bioDomains}
+              boldClassName="font-semibold text-foreground"
+            />
           </p>
         </div>
         <div className="py-3 md:pb-0 md:pt-20 flex gap-10 px-10 md:px-20">
           <div className="relative h-fit">
             <div className="absolute top-0 left-0 w-1 h-full bg-lime-7" />
             <p className="text-xl md:text-3xl max-w-[835px] pl-5 text-slate-11">
-              I have{" "}
-              <span className="font-semibold text-foreground">
-                5+ years of experience
-              </span>
-              , a background in public policy, and expertise in designing for
-              social impact. I strive to create inclusive, accessible interfaces
-              for{" "}
-              <span className="font-semibold text-foreground">
-                data products
-              </span>{" "}
-              and{" "}
-              <span className="font-semibold text-foreground">
-                enterprise solutions
-              </span>
-              .
+              <RichText
+                text={homePage.bioExperience}
+                boldClassName="font-semibold text-foreground"
+              />
             </p>
           </div>
           <Image

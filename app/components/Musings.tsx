@@ -1,3 +1,4 @@
+import { musings } from "@/lib/data";
 import { Location } from "@/assets/icons";
 import Image from "next/image";
 
@@ -12,26 +13,9 @@ export default function Musings() {
             Musings from my Quarter-Life Crisis
           </span>
           <div className="flex gap-4 justify-center mt-12 musings">
-            <Card
-              title="Policy in Action Fellow @ YLAC"
-              subtitle="I learned public policy basics and drafted recommendations to optimise student’s entry into UG medical education in India."
-              image="/ylac.png"
-              locationTag="Delhi"
-              statsTag="50+ Professionals, 1 Designer"
-            />
-            <Card
-              title="Visiting Faculty @ Srishti Manipal"
-              subtitle="I facilitated the course ‘Information Visualisation’ over 6 weeks for 25 third-year undergraduate students.  "
-              image="/smi.png"
-              locationTag="Bengaluru"
-            />
-            <Card
-              title="Yatri @ Jagriti Yatra"
-              subtitle="I lived on a train for 15 days and explored India to better understand the 1 billion people we design for every day."
-              image="/jy.png"
-              locationTag="8000 KM across 10 States"
-              statsTag="500 People on 1 train"
-            />
+            {musings.map((item) => (
+              <Card key={item.title} {...item} />
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { ArrowUpRight, ChevronRight } from "@/assets/icons";
+import { workExperience } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -12,32 +13,9 @@ export default function Work() {
             Work Experience
           </span>
           <div className="mt-6 md:mt-12 flex flex-col gap-4 md:gap-6">
-            <WorkItem
-              title="EPIC World (2025-Present)"
-              subtitle="Lead Designer"
-              link="https://www.epicworld.com/"
-              current={true}
-            />
-            <WorkItem
-              title="Parallel HQ (2023-25)"
-              subtitle="Sr. Product Designer"
-              link="https://www.parallelhq.com"
-            />
-            <WorkItem
-              title="Srishti Manipal (2024)"
-              subtitle="Visiting Faculty"
-              link="https://srishtimanipalinstitute.in"
-            />
-            <WorkItem
-              title="CivicDataLab (2023)"
-              subtitle="Sr. Product Designer"
-              link="https://civicdatalab.in"
-            />
-            <WorkItem
-              title="f1studioz (2021-22)"
-              subtitle="UX Designer"
-              link="https://f1studioz.com"
-            />
+            {workExperience.map((item) => (
+              <WorkItem key={item.title} {...item} />
+            ))}
           </div>
         </div>
       </div>
@@ -46,7 +24,7 @@ export default function Work() {
         alt="books"
         width={400}
         height={360}
-        className="hidden md:block"
+        className="-mt-10 hidden md:block h-fit"
       />
     </section>
   );
