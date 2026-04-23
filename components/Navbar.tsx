@@ -1,10 +1,11 @@
 "use client";
 
-import { ConnectOutline, ConnectFilled } from "@/assets/icons";
+import { Connect, Work } from "@/assets/icons";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -12,39 +13,13 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="flex items-center gap-4 justify-between px-10 md:px-20 py-4 md:py-6">
-        {/* <NavLink
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-          icon={<HomeOutline />}
-          // active={pathname === "/"}
-          className="hidden md:flex"
-        >
-          about me
-        </NavLink> */}
-        <Link href="/" className="block md:hidden">
+        <Link href="/">
           <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
         </Link>
-        <button
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-        >
-          <Image
-            src="/anushkaLogo.svg"
-            alt="logo"
-            width={121}
-            height={100}
-            className="hidden md:block cursor-pointer"
-          />
-        </button>
         <div className="flex gap-8">
+          <NavLink href="/work" icon={<Work />} active={pathname === "/work"}>
+            work
+          </NavLink>
           <NavLink
             onClick={() => {
               window.scrollTo({
@@ -52,9 +27,7 @@ export default function Navbar() {
                 behavior: "smooth",
               });
             }}
-            icon={
-              pathname === "/connect" ? <ConnectFilled /> : <ConnectOutline />
-            }
+            icon={<Connect />}
             active={pathname === "/connect"}
           >
             connect
@@ -71,24 +44,46 @@ const NavLink = ({
   icon,
   active,
   className,
+  href,
 }: {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   icon?: React.ReactNode;
   active?: boolean;
   className?: string;
+  href?: string;
 }) => {
-  return (
-    <button
-      onClick={onClick}
-      className={cn(
-        "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black cursor-pointer",
-        active && "text-primary",
-        className && className
-      )}
-    >
+  const [hovered, setHovered] = useState(false);
+
+  const finalClassName = cn(
+    "text-base md:text-xl font-semibold flex items-center gap-1 md:gap-3 text-black cursor-pointer transition-colors",
+    (active || hovered) && "text-primary",
+    className,
+  );
+
+  const handlers = {
+    onMouseEnter: () => setHovered(true),
+    onMouseLeave: () => setHovered(false),
+  };
+
+  const content = (
+    <>
       <div className="w-4 h-4 md:w-5 md:h-5">{icon}</div>
       {children}
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link className={finalClassName} href={href} {...handlers}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button onClick={onClick} className={finalClassName} {...handlers}>
+      {content}
     </button>
   );
 };
