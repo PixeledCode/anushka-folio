@@ -19,7 +19,7 @@ export default function Work() {
               current={true}
             />
             <WorkItem
-              title="Parallel HQ (2023-2025)"
+              title="Parallel HQ (2023-25)"
               subtitle="Sr. Product Designer"
               link="https://www.parallelhq.com"
             />

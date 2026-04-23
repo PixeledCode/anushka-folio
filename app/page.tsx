@@ -6,6 +6,7 @@ import Musings from "./components/Musings";
 import About from "./components/About";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/Popover";
 import { Info } from "@/assets/icons";
+import CursorTooltip from "./components/CursorTooltip";
 
 export default function Home() {
   return (
@@ -26,14 +27,14 @@ export default function Home() {
                     <Info />
                   </span>
                 </PopoverTrigger>
-                <PopoverContent align="end" className="w-full max-w-[685px]">
+                <PopoverContent align="end" className="w-full max-w-[540px]">
                   <Image
                     src="/home-quote.png"
-                    width={637}
-                    height={358}
+                    width={540}
+                    height={320}
                     alt="quote from book: a mathematician reads the newspapaer"
                   />
-                  <p className="text-xl mt-6">
+                  <p className="text-lg mt-5">
                     Author John Allen Paulos’s fondly dedicates his book ‘A
                     Mathematician Reads the Newspaper’ to storytelling
                     number-crunchers and number-crunching storytellers.
@@ -52,7 +53,9 @@ export default function Home() {
             <div className="relative ">
               <p>
                 to bridge the gap between{" "}
-                <span className="underlineSVG">data and people</span>.
+                <CursorTooltip text="sometimes animals and birds">
+                  <span className="underlineSVG">data and people</span>
+                </CursorTooltip>.
               </p>
             </div>
           </div>
@@ -73,7 +76,7 @@ export default function Home() {
             <p className="text-xl md:text-3xl max-w-[835px] pl-5 text-slate-11">
               I have{" "}
               <span className="font-semibold text-foreground">
-                4+ years of experience
+                5+ years of experience
               </span>
               , a background in public policy, and expertise in designing for
               social impact. I strive to create inclusive, accessible interfaces
