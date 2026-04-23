@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main>
       <section>
-        <div className="py-10 md:py-40 px-10 md:px-20 bg-[url('/header-texture.png')] bg-cover border-b border-slate-4">
+        <div className="py-20 md:pt-40 px-10 md:px-20 bg-[url('/header-texture.png')] bg-cover border-b border-slate-4">
           <div className="flex items-center gap-1">
             <h1 className="text-xl md:text-2xl">
               Hi, I’m Anushka —{" "}

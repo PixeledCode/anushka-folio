@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="flex items-center gap-4 justify-between px-10 md:px-20 py-4 md:py-6">
-        <Link href="/">
+        <Link href="/" className="cursor-pointer">
           <Image src="/anushkaLogo.svg" alt="logo" width={121} height={100} />
         </Link>
         <div className="flex gap-8">
