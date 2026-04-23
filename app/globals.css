@@ -135,3 +135,7 @@ body {
   backdrop-filter: blur(10px);
   z-index: 20;
 }
+
+@utility section-title {
+  @apply text-light uppercase text-sm md:text-base;
+}

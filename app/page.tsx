@@ -11,7 +11,7 @@ import CursorTooltip from "./components/CursorTooltip";
 export default function Home() {
   return (
     <main>
-      <section className="">
+      <section>
         <div className="py-10 md:py-40 px-10 md:px-20 bg-[url('/header-texture.png')] bg-cover border-b border-slate-4">
           <div className="flex items-center gap-1">
             <h1 className="text-xl md:text-2xl">
@@ -55,7 +55,8 @@ export default function Home() {
                 to bridge the gap between{" "}
                 <CursorTooltip text="sometimes animals and birds">
                   <span className="underlineSVG">data and people</span>
-                </CursorTooltip>.
+                </CursorTooltip>
+                .
               </p>
             </div>
           </div>
