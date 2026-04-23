@@ -6,7 +6,7 @@ export default function Musings() {
     <section className="py-10 hidden md:block">
       <div className="bg-[url('/waves.svg')] w-full h-[87px]"></div>
       <div className="p-20 bg-slate-3">
-        <h2 className="text-light uppercase">beyond basics</h2>
+        <h2 className="section-title">beyond basics</h2>
         <div className="mt-2">
           <span className="text-3xl font-serif">
             Musings from my Quarter-Life Crisis

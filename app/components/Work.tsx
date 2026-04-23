@@ -6,7 +6,7 @@ export default function Work() {
   return (
     <section className="p-10 md:p-20 flex gap-16">
       <div className="w-full">
-        <h2 className="text-light uppercase text-sm md:text-base">basics</h2>
+        <h2 className="section-title">basics</h2>
         <div className="mt-2">
           <span className="text-2xl md:text-3xl font-serif">
             Work Experience
