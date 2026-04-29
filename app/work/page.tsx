@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { workPage } from "@/lib/data";
 import RichText from "@/components/RichText";
-import Image from "next/image";
+import ProjectImage from "@/components/ProjectImage";
 
 export default function Work() {
   return (
@@ -35,24 +35,20 @@ export default function Work() {
                     ? item.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="inline-block text-sm lg:text-base uppercase text-lime-12 px-2 lg:px-3 py-1 bg-slate-3 rounded-sm"
+                          className="inline-block text-sm uppercase text-lime-12 px-2 lg:px-3 py-1 bg-slate-3 rounded-sm"
                         >
                           {tag}
                         </span>
                       ))
                     : null}
                 </div>
-                <p className="text-lg lg:text-xl">{item.description}</p>
-                <span className="text-lg lg:text-xl">{item.time}</span>
+                <p className="text-base lg:text-lg whitespace-pre-line">
+                  <RichText text={item.description} boldClassName="font-semibold" />
+                </p>
+                <span className="text-lg">{item.time}</span>
               </div>
               <div className="w-full lg:w-[52%] lg:shrink-0">
-                <Image
-                  src={item.image}
-                  width={845}
-                  height={440}
-                  alt=""
-                  className="rounded-xl object-cover w-full max-h-[440px]"
-                />
+                <ProjectImage src={item.image} link={item.link} />
               </div>
             </article>
           ))}

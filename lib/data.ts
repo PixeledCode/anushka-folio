@@ -76,29 +76,28 @@ export const workPage = {
     {
       title: "SAVii",
       description:
-        "Built to support India's ambitious goal of achieving FMD-free status by 2025, the platform integrates data collected by field workers, streamlines testing workflows for diagnostic labs, and offers real-time analytics to inform decision-making.",
+        "SAVii is a salary-linked financial wellness platform that serves as an ethical alternative to exploitative lending for blue-collar workers in the Philippines, giving employers a way to offer loans, insurance, and education directly through payroll. I led design on key growth modules — refinance, reloan, quick loans, and referrals — with a data-driven approach to drive adoption and retention.",
       time: "2025",
       tags: ["loan app", "growth strategy", "data-driven design"],
-      image:
-        "https://images.unsplash.com/photo-1776255076699-d2dc33434b16?q=80&w=2320&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      link: "https://www.parallelhq.com/work/savii-parallel",
+      image: "/savii-card.png",
     },
     {
       title: "Avifauna",
       description:
-        "A tool to create, and maintain a central data repository for researcher across all avian projects at Bombay Natural History Society.",
+        "We built a unified bird monitoring platform for BNHS to replace decades of fragmented field data living across handwritten forms, spreadsheets, and decentralised systems. I brought data product experience to a design-first team, applying schema-level thinking to inform UX decisions.",
       time: "2024",
       tags: ["zero-to-one", "data exchange", "system design"],
-      image:
-        "https://images.unsplash.com/photo-1776255076699-d2dc33434b16?q=80&w=2320&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      link: "https://www.parallelhq.com/work/bnhs-parallel",
+      image: "/avifauna-card.png",
     },
     {
       title: "Dharini",
       description:
-        "Built to support India's ambitious goal of achieving FMD-free status by 2025, the platform integrates data collected by field workers, streamlines testing workflows for diagnostic labs, and offers real-time analytics to inform decision-making.",
+        "Dharini is a disease-agnostic environmental surveillance platform that bridges fragmented field data, lab workflows, and real-time decision-making to support India's goal of achieving FMD-free status. I led research and client interaction, mapping information flows across stakeholders to ensure the information architecture reflected how data actually moves through the system, supporting modularity and scalability.",
       time: "2024",
-      tags: ["zero-to-one", "loan app", "growth strategy", "data-driven design"],
-      image:
-        "https://images.unsplash.com/photo-1776255076699-d2dc33434b16?q=80&w=2320&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tags: ["zero-to-one", "disease surveillance", "data exchange"],
+      image: "/dharini-card.png",
     },
   ],
 };
